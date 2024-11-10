@@ -1,1 +1,36 @@
 
+{
+    "displayName": "KQL",
+    "blocks": [
+        {
+            "id": "aaaboqqdviqsy",
+            "type": "input",
+            "inputType": "firehose",
+            "firehoseSeconds": 604800
+        },
+        {
+            "id": "aaaboqqdvkhdi",
+            "type": "remove",
+            "subject": "item",
+            "value": "reply"
+        },
+        {
+            "id": "aaaboqqdvjbts",
+            "type": "regex",
+            "value": "(?i)\\b#?KQL\\b|\\b(DeviceProcessEvents|IdentityInfo|DeviceLogonEvents|SecurityEvent|AzureActivity|AuditLogs|SigninLogs|ProcessEvents|UserSignins|LogManagement|DeviceNetworkEvents|DeviceFileEvents|DeviceRegistryEvents|DeviceImageLoadEvents|DeviceEvents|AlertInfo|AlertEvidence|IdentityLogonEvents|EmailEvents|EmailPostDeliveryEvents|EmailUrlInfo|EmailAttachmentInfo|FileCreationEvents|NetworkSessionEvents)\\b",
+            "caseSensitive": false
+        },
+        {
+            "type": "remove",
+            "subject": "item",
+            "value": "repost",
+            "id": "aaaborjl4h33c"
+        },
+        {
+            "id": "aaaboqqdvjvp4",
+            "type": "sort",
+            "sortType": "created_at"
+        }
+    ],
+    "license": "MIT"
+}
