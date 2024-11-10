@@ -1,0 +1,42 @@
+{
+    "displayName": "DEaTH",
+    "blocks": [
+        {
+            "type": "input",
+            "inputType": "firehose",
+            "id": "aaabchnynmb7g",
+            "firehoseSeconds": 604800
+        },
+        {
+            "id": "aaabcfbqpvp6o",
+            "type": "regex",
+            "value": "(?i)(#DetectionEngineering|#ThreatHunting|detection\\s*engineering|threat\\s*hunting|threat\\s*hunters?|detection\\s*strateg(?:y|ies)|threat\\s*detection|SOC\\s*detection|detection\\s*tactics|detection\\s*as\\s*code|detection\\s*engineering\\s*as\\s*code|detection\\s*lab|behavioral\\s*analysis|adversary\\s*emulation|sigma\\s*rules?|attack\\s*surface|data\\s*source\\s*monitoring|event\\s*correlation|attack\\s*chain|detection\\s*logic|indicator\\s*of\\s*compromise|SOC\\s*analytics|alert\\s*tuning|threat\\s*intelligence)",
+            "caseSensitive": false
+        },
+        {
+            "type": "remove",
+            "subject": "item",
+            "value": "repost",
+            "id": "aaabc3j6hnemw"
+        },
+        {
+            "type": "remove",
+            "subject": "item",
+            "value": "reply",
+            "id": "aaabc3tgzprj6"
+        },
+        {
+            "type": "regex",
+            "value": "🚨New ransom group blog post!🚨\n",
+            "caseSensitive": false,
+            "id": "aaabok5q5ljmg",
+            "invert": true
+        },
+        {
+            "id": "aaabcfbqpxks6",
+            "type": "sort",
+            "sortType": "created_at"
+        }
+    ],
+    "license": "MIT"
+}
